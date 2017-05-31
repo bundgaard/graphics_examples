@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Web Audio touch tone test</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var audio = new AudioContext;
+        var bufferSource = audio.createBufferSource();
+        var source = audio.createScriptProcessor(1024,1,2);
+        source.onaudioprocess = function(e){
+            console.log(e);
+
+        };
+        source.connect(audio)
+
+        
+    </script>
+</body>
+
+</html>
